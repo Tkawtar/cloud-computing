@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Task</title>
+</head>
+<body>
+    <h1>Edit Task</h1>
+    <form method="POST">
+        <label>Title:</label><br>
+        <input type="text" name="title" value="{{ task[1] }}" required><br>
+        <label>Description:</label><br>
+        <textarea name="description">{{ task[2] }}</textarea><br>
+        <label>Status:</label>
+        <input type="checkbox" name="status" {% if task[3] %}checked{% endif %}><br>
+        <label>Due Date:</label><br>
+        <input type="date" name="due_date" value="{{ task[4] }}"><br><br>
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>
